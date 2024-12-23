@@ -1,0 +1,163 @@
+/* Container principal */
+
+
+.container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+  
+    .left-section {
+      background-color: #07074b; /* Couleur bleue sombre */
+      color: #fff;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  
+      .logo {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+      }
+  
+      .slogan h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+  
+      .illustration img {
+        width: 500px;
+        height: 300px;
+        margin-top: 3rem;
+      }
+    }
+  
+    .right-section {
+      flex: 1;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .login-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 2rem;
+        width: 400px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+  
+        .welcome-title {
+          font-size: 2rem;
+          color: #000;
+          margin-bottom: 0.5rem;
+        }
+  
+        .subtitle {
+          color: #666;
+          margin-bottom: 2rem;
+        }
+  
+        .form-group {
+          text-align: left;
+          margin-bottom: 1.5rem;
+  
+          label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-size: 0.9rem;
+          }
+  
+          input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            outline: none;
+  
+            &:focus {
+              border-color: #1d2b53;
+            }
+          }
+        }
+  
+        .password-input {
+          display: flex;
+          align-items: center;
+  
+          input {
+            flex: 1;
+          }
+  
+          .eye-icon {
+            margin-left: -2rem;
+            cursor: pointer;
+          }
+        }
+  
+        .btn-primary {
+          width: 100%;
+          padding: 0.75rem;
+          background-color: #1d2b53;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          font-size: 1rem;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #162040;
+          }
+        }
+  
+        .no-account {
+          margin-top: 1.5rem;
+          color: #333;
+  
+          a {
+            color: #1d2b53;
+            text-decoration: none;
+            font-weight: bold;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .form-group select:focus {
+    outline: none;
+    border-color: #005bb5;
+    background-color: #fff;
+  }
+  
+  .student-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .teacher-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,16 @@
+<div class="todo-container">
+  <h2 class="title">Tâches à faire</h2>
+
+  <!-- Trois bulles -->
+  <div class="bubble-container">
+    <div class="bubble">
+      <input type="text" [value]="task1" (input)="updateTask(1, $event)" placeholder="Tâche 1" />
+    </div>
+    <div class="bubble">
+      <input type="text" [value]="task2" (input)="updateTask(2, $event)" placeholder="Tâche 2" />
+    </div>
+    <div class="bubble">
+      <input type="text" [value]="task3" (input)="updateTask(3, $event)" placeholder="Tâche 3" />
+    </div>
+  </div>
+</div>

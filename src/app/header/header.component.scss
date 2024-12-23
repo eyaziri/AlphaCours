@@ -1,0 +1,36 @@
+.header {
+  display: flex; /* Utiliser flexbox pour aligner les éléments */
+  align-items: center; /* Centrer verticalement */
+  justify-content: space-between; /* Espace entre les éléments */
+  padding: 10px 20px; /* Espacement interne */
+  background-color: #f5f5f5; /* Couleur de fond légère */
+  border-bottom: 1px solid #ddd; /* Ligne de séparation en bas */
+}
+
+.header input[type="text"] {
+  flex: 1; /* Prendre le maximum d'espace disponible */
+  margin-right: 20px; /* Espacement avec les autres éléments */
+  padding: 10px; /* Espacement interne */
+  font-size: 16px; /* Taille du texte */
+  border: 1px solid #ccc; /* Bordure grise */
+  border-radius: 5px; /* Coins arrondis */
+  outline: none; /* Supprimer le contour bleu au focus */
+}
+
+.header input[type="text"]::placeholder {
+  color: #aaa; /* Couleur du texte du placeholder */
+}
+
+.header span {
+  font-size: 20px; /* Taille de l'icône de notification */
+  margin-right: 20px; /* Espacement entre l'icône et l'image */
+  cursor: pointer; /* Curseur en mode pointeur */
+}
+
+.header img {
+  width: 50px; /* Largeur de l'image */
+  height: 50px; /* Hauteur de l'image */
+  border-radius: 50%; /* Forme circulaire */
+  object-fit: cover; /* S'assurer que l'image est bien ajustée */
+  cursor: pointer; /* Curseur en mode pointeur */
+}

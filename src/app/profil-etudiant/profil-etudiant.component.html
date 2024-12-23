@@ -1,0 +1,32 @@
+<div class="container">
+  <app-sidebar 
+    (toggleSchedule)="toggleSchedule()" 
+    (logout)="logout()" 
+    (navigateToMessages)="navigateToMessages()"
+    (navigateToHome)="navigateToHome()"
+    (exitToHome)="exitToHome()">
+  </app-sidebar>
+  
+  <div class="main-content">
+    <app-header></app-header>
+
+    <div class="messages-page" *ngIf="showMessagesPage">
+      <div class="top">
+        <app-person></app-person>
+        <app-chatwindow></app-chatwindow>
+      </div>
+    </div>
+    
+    <div class="top-section" *ngIf="showHomeSection">
+      <app-calendar></app-calendar>
+      <app-todo-list></app-todo-list>
+    </div>
+
+    <div class="schedule-page" *ngIf="showSchedule">
+      <app-schedule></app-schedule>
+    </div>
+
+  </div>
+</div>
+
+  

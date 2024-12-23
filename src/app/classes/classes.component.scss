@@ -1,0 +1,107 @@
+/* Conteneur principal pour la section "Classes" */
+.classes-container {
+    width: 85%; /* Ne dépasse pas le milieu de la page */
+    margin: 0 auto; /* Centré horizontalement */
+    margin-top: 80px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px; /* Réduit l'espacement intérieur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 12px; /* Taille du texte réduite */
+  }
+  /* Barre d'en-tête pour les colonnes */
+.classes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0px 90px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #7a7a7a;
+    text-transform: uppercase;
+  }
+  
+  /* Style des titres individuels */
+  .header-item {
+    flex: 1;
+    padding-inline: 33px;
+    text-align: center;
+  }
+  
+  .header-item:first-child {
+    text-align: left; /* Alignement gauche pour la colonne Class */
+  }
+  
+  
+  /* Titre de la section */
+  h3 {
+    font-size: 16px;
+    color: #4a4a4a;
+    
+    margin-bottom: 10px;
+  }
+  
+  /* Chaque classe */
+  .class-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+  }
+  
+  /* Informations sur la classe */
+  .class-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .class-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Avatars */
+  .avatars {
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+  }
+  
+  .avatars img {
+    width: 100px; /* Taille réduite */
+    height: 25px; /* Taille réduite */
+    border-radius: 50%;
+    margin-right: 3px;
+    border: 1px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .extra-avatars {
+    font-size: 10px;
+    font-weight: bold;
+    background-color: #ddd;
+    color: #555;
+    padding: 2px 5px;
+    border-radius: 10px;
+    margin-left: 3px;
+  }
+  
+  /* Statistiques */
+  .class-stats {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .class-stats img {
+    max-width: 100px; /* Taille réduite */
+   
+  }
