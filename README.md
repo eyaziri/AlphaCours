@@ -1,27 +1,54 @@
-# GestionDeCours
+# AlphaCours: An Angular-Powered Educational Platform
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+AlphaCours is a modern, responsive web application designed to streamline academic life for both professors and students. Built using Angular, this platform offers intuitive functionalities that enhance communication, organization, and collaboration within an educational environment. Below is a detailed overview of its features and structure:
 
-## Development server
+# Key Features:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## User Roles
 
-## Code scaffolding
+### Student Accounts:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Adjustable Schedule: 
+Students can manage their class schedules, add study times, and view upcoming sessions.
 
-## Build
+#### Chat System:
+Real-time messaging to connect with professors or friends, fostering better collaboration.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Professor Accounts:
 
-## Running unit tests
+#### Adjustable Schedule: 
+Students can manage their class schedules, add study times, and view upcoming sessions.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Chat System:
+Real-time messaging to connect with professors or friends, fostering better collaboration.
 
-## Running end-to-end tests
+#### Class Creation: 
+Create and manage classes, including specifying times, topics, and enrolled students.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### Document Management: 
+Upload, organize, and share course materials like lecture notes, presentations, and assignments.
 
-## Further help
+# Core Functionalities:
+## User Authentication and Profiles
+### Registration and Login
+Secure sign-up for students and professors.
+Role-based login ensures personalized dashboards for each type of user.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Dashboard
+### Students
+Overview of class schedules, upcoming assignments, and active conversations.
+### Professors:
+Overview of created classes, teaching schedules, and document statistics.
+
+## Schedule Management
+An interactive calendar to visualize and edit schedules with drag-and-drop functionality.
+
+# Technical Stack
+## Frontend:
+Angular for a dynamic and interactive user experience.
+
+
+
+
+
+
