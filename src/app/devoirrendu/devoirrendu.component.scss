@@ -49,3 +49,47 @@
     background-color: #f1f1f1;
   }
   
+  .add-document-form input[type="text"],
+  .add-document-form input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 30%; /* On limite la largeur des champs pour qu'ils tiennent sur une ligne */
+    box-sizing: border-box;
+  }
+  
+  /* Bouton d'ajout */
+  .add-document-form button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 20%; /* Le bouton occupe un espace proportionnel */
+  }
+  
+  .add-document-form button:hover {
+    background-color: #218838;
+  }
+  
+  .add-document-form button:active {
+    background-color: #1e7e34;
+  }
+  
+  /* Responsiveness : ajuster l'affichage pour les petits écrans */
+  @media (max-width: 600px) {
+    .add-document-form {
+      flex-direction: column; /* Empile les champs sur les petits écrans */
+      align-items: center; /* Centre les éléments */
+    }
+  
+    .add-document-form input[type="text"],
+    .add-document-form input[type="date"],
+    .add-document-form button {
+      width: 100%; /* Les champs et le bouton occupent toute la largeur */
+    }
+  }

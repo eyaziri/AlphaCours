@@ -6,73 +6,20 @@
       <span>Ameni</span>
     </div>
     <div class="actions">
-      <i 
-          style="
-            
-            width: 24px;
-            height: 24px;
-            background-size: contain;
-            background-repeat: no-repeat;
- 
-	    background-image: url('../../assets/images/call.jpg'); 
-            ">
-        </i>
-        <i 
-        style="
-          
-          width: 24px;
-          height: 24px;
-          background-size: contain;
-          background-repeat: no-repeat;
-
-    background-image: url('../../assets/images/video.jpg'); 
-          ">
-      </i>
-      <i 
-          style="
-            
-            width: 24px;
-            height: 24px;
-            background-size: contain;
-            background-repeat: no-repeat;
- 
-	    background-image: url('../../assets/images/dots.jpg'); 
-            ">
-        </i>
+      <i style="width: 24px; height: 24px; background-size: contain; background-repeat: no-repeat; background-image: url('../../assets/images/call.jpg');"></i>
+      <i style="width: 24px; height: 24px; background-size: contain; background-repeat: no-repeat; background-image: url('../../assets/images/video.jpg');"></i>
+      <i style="width: 24px; height: 24px; background-size: contain; background-repeat: no-repeat; background-image: url('../../assets/images/dots.jpg');"></i>
     </div>
   </div>
 
   <!-- Chat Body -->
   <div class="chat-body">
-    <!-- Messages will appear here -->
-    <div class="message received">
-      <img src="../../assets/images/7.png" alt="Avatar" class="avatar" />
-      <div class="bubble">
-        <span>Vous n'avez pas encore deposer votre projet !</span>
+    <div *ngFor="let message of messages" [ngClass]="{'message received': message.type === 'received', 'message sent': message.type === 'sent'}">
+      <div *ngIf="message.type === 'received'">
+        <img src="../../assets/images/7.png" alt="Avatar" class="avatar" style="height: 30px;width: 30px;"/>
       </div>
-    </div>
-
-    <!-- Message envoyé aligné à droite -->
-    <div class="message sent">
       <div class="bubble">
-        <span>Oui madame , j'ai des problemes de connextion et j'ai raté le deadline... 
-      <br> peux-je avoir votre mail pour vous envoyer mon travail
-        </span>
-      </div>
-    </div>
-
-    <div class="message received">
-      <img src="../../assets/images/7.png" alt="Avatar" class="avatar" />
-      <div class="bubble">
-        <span>ameni&#64;gmail.com
-          <br>mais ne pas depasser ce soir pour m'envoyer 
-        </span>
-      </div>
-    </div>
-
-    <div class="message sent">
-      <div class="bubble">
-        <span>Merci beaucoup!</span>
+        <span>{{ message.text }}</span>
       </div>
     </div>
   </div>
@@ -80,14 +27,10 @@
   <!-- Chat Footer -->
   <div class="chat-footer">
     <button class="attach-btn"><i class="icon-attach"></i></button>
-    <input type="text" placeholder="Ecrire votre message ici..." />
-    
+    <input type="text" placeholder="Ecrire votre message ici..." (input)="onMessageInput($event)" (keydown.enter)="sendMessage()" />
+
     <!-- Emoji Button -->
-    <button class="emoji-btn" (click)="toggleEmojiPicker()">
-      🙂<i class="icon-emoji"></i>
-    </button>
-    
-    <!-- Emoji Picker -->
+    <button class="emoji-btn" (click)="toggleEmojiPicker()">🙂<i class="icon-emoji"></i></button>
     <div *ngIf="emojiPickerVisible" class="emoji-picker">
       <div *ngFor="let emoji of emojis" class="emoji" (click)="selectEmoji(emoji)">
         {{ emoji }}

@@ -78,4 +78,26 @@
   .documents-table tr:nth-child(even) {
     background-color: #f9f9f9;
   }
+  .add-doc-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .add-doc-form input {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3;
+  }
   
