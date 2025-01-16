@@ -1,0 +1,49 @@
+<div class="container">
+  <app-sidebar-teacher 
+    (showHome)="showHome()" 
+    (showSchedule)="toggleSchedule()" 
+    (showMessages)="onClickMessages()" 
+    (logout)="onClickLogout()"
+    (showEmplois)="onClickEmplois()"
+    (showDoc)="onClickDoc()"
+    (showDev)="onClickDev()"
+  >
+  </app-sidebar-teacher>
+
+  <div class="main-content">
+    <app-header></app-header>
+
+    <!-- Page de messages -->
+    <div class="messages-page" *ngIf="showMessagesPage">
+      <div class="top">
+        <app-person></app-person>
+        <app-chatwindow></app-chatwindow>
+      </div>
+    </div>
+
+    <!-- Section principale avec le calendrier et les classes -->
+    <div class="top-section" *ngIf="showHomeSection && !showMessagesPage && !showClassCreator">
+      <!-- Calendrier -->
+      <app-calendar style="width: 300px;"></app-calendar>
+
+      <app-classes style="margin-top: -10px;" ></app-classes>
+    </div>
+
+    <!-- Devoir rendu -->
+    <app-devoirrendu *ngIf="!showHomeSection && !showMessagesPage && !showClassCreator && showDevPage"></app-devoirrendu>
+
+    <!-- Documents -->
+    <app-document *ngIf="!showHomeSection && !showMessagesPage && !showClassCreator && showDocPage"></app-document>
+
+    <!-- Horaires (Schedule) -->
+    <div class="top-section" *ngIf="!showHomeSection && !showMessagesPage && !showClassCreator && showEmploisPage">
+
+      <app-schedule-teacher style="width: 1000px;"></app-schedule-teacher>
+    </div>
+
+    <!-- Créateur de classe -->
+    <div class="class-creator-section" *ngIf="showClassCreator">
+      <app-class-creator></app-class-creator>
+    </div>
+  </div>
+</div>

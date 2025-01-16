@@ -1,0 +1,98 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000235;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search-bar {
+  padding: 0.5rem;
+  width: 500px;
+  border-radius: 5px;
+  border: none;
+}
+
+.navigation a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Styles globaux */
+.container {
+background-color: #f5f5f5;
+display: flex;
+height: 93.5vh;
+}
+
+/* Sidebar */
+app-sidebar {
+background-color: #f5f5f5;
+border-radius: 50px 50px 50px 50px;
+color: white;
+font-weight: bold;
+width: 21%;
+height: 90%;
+padding: 20px;
+}
+
+/* Main content */
+.main-content {
+flex: 1;
+display: flex;
+flex-direction: column;
+background-color: #f5f5f5;
+}
+
+/* Top section : calendar + to-do */
+.top-section {
+display: flex;
+justify-content: space-between;
+margin: 10px;
+}
+
+app-calendar, app-todo-list {
+background: white;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+padding: 10px;
+width: 48%;
+border-radius: 10px;
+}
+
+.schedule-page{
+height: 100hv;
+}
+.top {
+display: flex;
+justify-content: space-between;
+margin: 10px;
+background: #dbdada;
+}
+app-person, app-chatwindow {
+background: #e0dddd;
+
+padding: 20px;
+width: 400px;
+border-radius: 10px;
+}
+.messages-page{
+display: flex;
+height: 106vh;
+background-color:#e0dddd;
+}

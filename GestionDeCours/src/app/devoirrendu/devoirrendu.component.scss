@@ -1,0 +1,95 @@
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Section de classe */
+  .class-section {
+    margin-bottom: 40px;
+  }
+  
+  .class-section h2 {
+    color: #060b52;
+    border-bottom: 2px solid #060b52;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Tableau */
+  .documents-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .documents-table th, .documents-table td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+  }
+  
+  .documents-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .documents-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .documents-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .add-document-form input[type="text"],
+  .add-document-form input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 30%; /* On limite la largeur des champs pour qu'ils tiennent sur une ligne */
+    box-sizing: border-box;
+  }
+  
+  /* Bouton d'ajout */
+  .add-document-form button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 20%; /* Le bouton occupe un espace proportionnel */
+  }
+  
+  .add-document-form button:hover {
+    background-color: #218838;
+  }
+  
+  .add-document-form button:active {
+    background-color: #1e7e34;
+  }
+  
+  /* Responsiveness : ajuster l'affichage pour les petits écrans */
+  @media (max-width: 600px) {
+    .add-document-form {
+      flex-direction: column; /* Empile les champs sur les petits écrans */
+      align-items: center; /* Centre les éléments */
+    }
+  
+    .add-document-form input[type="text"],
+    .add-document-form input[type="date"],
+    .add-document-form button {
+      width: 100%; /* Les champs et le bouton occupent toute la largeur */
+    }
+  }

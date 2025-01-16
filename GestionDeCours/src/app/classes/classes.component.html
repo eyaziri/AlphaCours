@@ -1,0 +1,27 @@
+<div class="classes-container">
+  <h3>Classes</h3>
+
+  <!-- Barre d'en-tête -->
+  <div class="classes-header">
+    <span class="header-item">Classe</span>
+    <span class="header-item">Presence</span>
+    <span class="header-item">Grade</span>
+    <span class="header-item">Performance</span>
+  </div>
+
+  <!-- Classe Info2B -->
+  <div class="class-item" *ngFor="let classe of classes">
+    <div class="class-info">
+      <span class="class-name">{{ classe.name }}</span>
+      <div class="avatars">
+        <img *ngFor="let avatar of classe.avatars" [src]="avatar" alt="Avatar" />
+        <span class="extra-avatars" *ngIf="classe.extraAvatars">+{{ classe.extraAvatars }}</span>
+      </div>
+    </div>
+    <div class="class-stats">
+      <canvas id="presenceChart{{ classe.name }}"></canvas>
+      <canvas id="gradeChart{{ classe.name }}"></canvas>
+      <canvas id="performanceChart{{ classe.name }}"></canvas>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+.sidebar {
+  background-color: #00053e; /* Couleur de fond */
+  width: 300px; /* Largeur fixe */
+  height: 85vh; /* Hauteur pleine page */
+  left: 0; /* Colle la barre à gauche */
+  top: 0; /* Colle la barre en haut */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Répartition du contenu */
+  padding: 20px 10px; /* Espacement interne */
+  color: #fffefe;
+  font-family: Arial, sans-serif;
+  border-radius: 40px 40px 40px 40px; /* Coin arrondi en haut à droite */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Ombre pour la profondeur */
+  
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 10px;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        background-color: rgba(234, 234, 234, 0.1);
+        border-radius: 10px;
+      }
+
+      i {
+        width: 28px;
+        height: 28px;
+        
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      span {
+        font-size: 20px;
+        white-space: nowrap; /* Évite le saut de ligne */
+
+      }
+    }
+
+    /* Icônes */
+    .icon-home {
+      background-image: url('../../assets/images/home.png');
+    }
+    .icon-cours {
+      background-image: url('../../assets/images/cours.png');
+    }
+    .icon-messages {
+      background-image: url('../../assets/images/message.png');
+    }
+    
+  }
+
+  .illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+
+    img {
+      width: 100px; /* Taille de l'illustration */
+      height: auto;
+    }
+  }
+
+  .logout {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+    cursor: pointer;
+    
+
+    .icon-logout {
+      margin-top: -200px;
+      background-image: url('../../assets/images/sortie.png');
+      width: 24px;
+      height: 24px;
+      background-size: contain;
+    }
+    span {
+      font-size: 25px;
+    }
+  }
+}

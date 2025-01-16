@@ -1,0 +1,132 @@
+/* Section Témoignages */
+.testimonials-section {
+  background-color: #151f48;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  
+}
+
+.author img {
+  width: 90px;
+  height: 90px;
+  
+}
+
+.name {
+  font-weight: bold;
+}
+
+.role {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Pied de page */
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 30px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.footer-section h2 {
+  font-size: 25px;
+  margin-top: 50px;
+}
+
+.footer-section p,
+.footer-section input {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer-section input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer-bottom {
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+/* Ajoutez cette animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Appliquez l'animation aux cartes de témoignages */
+.testimonial-card {
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  animation: bounce 2s infinite;
+}
+
+/* Ajustez la durée et le délai de l'animation si nécessaire */
+.testimonial-card:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.testimonial-card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.testimonial-card:nth-child(3) {
+  animation-delay: 1s;
+}

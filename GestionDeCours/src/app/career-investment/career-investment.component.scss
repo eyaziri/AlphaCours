@@ -1,0 +1,99 @@
+.container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #333;
+  
+}
+
+.title {
+ 
+  color: #003366;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  background-color: #2b2b67;
+  padding: 20px;
+  color: white;
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%); /* Commence hors de l'écran à droite */
+    opacity: 0; /* Optionnel : rend l'image invisible au début */
+  }
+  100% {
+    transform: translateX(0); /* Retour à la position d'origine */
+    opacity: 1; /* Optionnel : rend l'image visible à la fin */
+  }
+}
+
+
+.slide-image {
+  animation: slideFromRight 1.5s ease-out forwards;
+}
+@keyframes rotateMirror {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.rotate-image {
+  animation: rotateMirror 2.5s linear infinite;
+}
+.feature-item {
+  max-width: 300px;
+  text-align: center;
+}
+
+.feature-item img {
+  width: 100px;
+  margin-bottom: 1px;
+}
+
+.statistiques {
+  background-color: #f2f2f2;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 134px;
+}
+
+.statistiques p {
+  font-size: 25px;
+  max-width: 600px;
+  text-align: left;
+  font-weight: bold;
+  margin-left:80px;
+}
+
+.student-image {
+  width: 235px;
+  margin-right: 70px;
+  margin-top: -40px;
+
+  
+}
+

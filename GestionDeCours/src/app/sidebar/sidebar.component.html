@@ -1,0 +1,59 @@
+<div class="sidebar">
+  <!-- Menu principal -->
+  <ul class="menu">
+    <li class="menu-item" (click)="onClickHome()">
+      <i 
+          style="
+            display: inline-block; 
+            width: 24px; 
+            height: 24px; 
+            background-image: url('../../assets/images/home.png'); 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            vertical-align: middle;">
+        </i>
+      <span> Accueil</span>
+    </li>
+    <li class="menu-item" (click)="onClickSchedule()">
+      <i 
+          style="
+            display: inline-block; 
+            width: 24px; 
+            height: 24px; 
+            background-image: url('../../assets/images/emploi.png'); 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            vertical-align: middle;">
+        </i>
+      <span> Emplois du temps</span>
+    </li>
+    <li class="menu-item" (click)="onClickMessages()">
+      <i 
+          style="
+            display: inline-block; 
+            width: 24px; 
+            height: 24px; 
+            background-image: url('../../assets/images/message.png'); 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            vertical-align: middle;">
+        </i>
+      <span> Messages</span>
+    </li>
+  </ul>
+
+  <div class="logout" (click)="onClickExit()">
+    <i 
+          style="
+            display: inline-block; 
+            width: 24px; 
+            height: 24px; 
+            background-image: url('../../assets/images/sortie.png'); 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            vertical-align: middle;
+            margin-top: -200px;">
+        </i>
+    <span style="margin-top: -200px;">Sortir</span>
+  </div>
+</div>

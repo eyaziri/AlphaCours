@@ -1,0 +1,181 @@
+.schedule-container {
+  font-family: Arial, sans-serif;
+  height: 80vh; /* Ajuster pour correspondre à la hauteur de la sidebar */
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  width: 1110px;
+  margin-top: -20px; /* Ajustez cette valeur pour remonter l'emploi du temps */
+}
+
+.schedule-header {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.schedule-grid {
+  display: flex;
+  position: relative;
+  height: 500px;
+  border-top: 1px solid #ddd;
+}
+
+.time-column {
+  flex: 0 0 80px;
+  height: 500px;
+  border-right: 1px solid #decaca;
+}
+
+.time-slot {
+  height: 55.5px;
+  text-align: center;
+  line-height: 60px;
+  color: #777;
+}
+
+.days-column {
+  flex: 1;
+  position: relative;
+  height: 500px;
+  border-right: 1px solid #ddda;
+}
+
+.day-header {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 5px 0;
+  font-weight: bold;
+}
+
+.event {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+
+  background-color: #b3e5fc;
+  color: #000;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.event-title {
+  margin: 0;
+  font-weight: bold;
+}
+
+.event-time {
+  margin: 0;
+  font-size: 12px;
+}
+.event-room {
+  font-size: 14px;
+  color: #555; /* Vous pouvez ajuster la couleur selon vos besoins */
+  margin-top: 5px;
+}
+
+
+.add-button {
+  background-color: #001e61;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 200px;
+ margin-bottom: -20px;
+  width: 200px;
+}
+
+.add-button:hover {
+  background-color: #003b9e;
+}
+.add-event-form {
+  background-color: #cec9c9; /* Fond léger pour un look propre */
+  padding: 40px;
+  height: 410px;
+  padding-top: 30px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Limiter la largeur du formulaire */
+  margin: 18px auto;
+}
+
+.add-event-form h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #413b3b;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #003b9e; /* Changer la couleur du bord au focus */
+  outline: none;
+}
+
+button {
+  width: 48%;
+  padding: 10px;
+  margin: 5px 1%;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #003b9e;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #003b9e;
+}
+
+
+.add-event-form select {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button:nth-child(2) {
+  background-color: #003b9e;
+}
+
+button:nth-child(2):hover {
+  background-color: #6c68da;
+}
+
+.add-event-form .button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .add-event-form {
+    width: 90%; /* S'adapte à des écrans plus petits */
+  }
+}

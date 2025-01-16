@@ -1,0 +1,48 @@
+
+<ng-container *ngIf="showAppContent">
+  <header *ngIf="!showTeacherProfile && !showStudentProfile"></header>
+<ng-container *ngIf="showHomeSection && !showTeacherProfile && !showStudentProfile">
+  <header>
+    <div class="header">
+      <div class="logo">AlphaCours</div>
+      <input type="text" class="search-bar" placeholder="What are you looking for?" />
+      <nav class="navigation">
+        <a routerLink="/" (click)="showHome()">Home</a>
+        <a (click)="navigateToSection('about-section')">About</a>
+        <a (click)="navigateToSection('about-section')">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+    <app-home 
+      (showRegister)="toggleLogin(true)" 
+      (showRegisterprof)="toggleLoginProf(true)">
+    </app-home>
+    <app-career-investment></app-career-investment>
+    <div id="about-section">
+      <app-testimonials></app-testimonials>
+    </div>
+  </ng-container>
+
+  <app-profil-prof *ngIf="showTeacherProfile" (returnToApp)="onReturnToHome()"></app-profil-prof>
+  <app-profil-etudiant *ngIf="showStudentProfile" (returnToApp)="onReturnToHome()"></app-profil-etudiant>
+
+</ng-container>
+
+<app-login 
+  *ngIf="showLogin" 
+  (loggedIn)="onStudentLoggedIn()" 
+  (showTeacherRegister)="showTeacherRegistration()" 
+  (showStudentRegister)="showStudentRegistration()">
+</app-login>
+
+<app-loginprof 
+  *ngIf="showLoginProf" 
+  (loggedIn)="onTeacherLoggedIn()" 
+  (showTeacherRegister)="showTeacherRegistration()" 
+  (showStudentRegister)="showStudentRegistration()">
+</app-loginprof>
+
+<app-teacher-registration *ngIf="showTeacherRegister" (registrationCompleted)="showHome()"></app-teacher-registration>
+
+<app-student-registration *ngIf="showStudentRegister" (registrationCompleted)="showHome()"></app-student-registration>

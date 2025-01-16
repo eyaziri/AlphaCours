@@ -1,0 +1,37 @@
+
+  <div class="signup-container">
+    <!-- Section Droite -->
+    <div class="right-section">
+      <div class="title-bar">
+        <h2>Documents</h2>
+      </div>
+      <hr class="divider">
+  
+      <!-- Formulaire pour ajouter un document -->
+      <div class="add-doc-form">
+        <input [(ngModel)]="newDocument.nom" placeholder="Nom du document" />
+        <input [(ngModel)]="newDocument.type" placeholder="Type (PDF, PNG...)" />
+        <input [(ngModel)]="newDocument.heure" placeholder="Heure (hh:mm AM/PM)" />
+        <button class="add-button" (click)="addDocument()">+ Ajouter un doc</button>
+      </div>
+  
+      <!-- Tableau des Documents -->
+      <table class="documents-table">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Type</th>
+            <th>Heure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let document of documents">
+            <td>{{ document.nom }}</td>
+            <td>{{ document.type }}</td>
+            <td>{{ document.heure }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

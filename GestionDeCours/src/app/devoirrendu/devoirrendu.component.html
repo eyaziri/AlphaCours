@@ -1,0 +1,31 @@
+<div *ngFor="let classe of classes" class="class-section">
+  <h2>{{ classe.nom }}</h2>
+  <table class="documents-table">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Type</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let document of classe.documents">
+        <td>{{ document.nom }}</td>
+        <td>{{ document.type }}</td>
+        <td>{{ document.date }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Formulaire pour ajouter un document -->
+  <div class="add-document-form">
+    <input type="text" #nom placeholder="Nom" />
+    <input type="text" #type placeholder="Type" />
+    <input type="date" #date />
+    <button
+      (click)="addDocument(classe, nom.value, type.value, date.value); nom.value=''; type.value=''; date.value=''"
+    >
+      Ajouter
+    </button>
+  </div>
+</div>

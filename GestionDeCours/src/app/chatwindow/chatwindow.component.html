@@ -1,0 +1,43 @@
+<div class="chat-window">
+  <!-- Chat Header -->
+  <div class="chat-header">
+    <div class="user-info">
+      <img src="../../assets/images/7.png" alt="Avatar" />
+      <span>Ameni</span>
+    </div>
+    <div class="actions">
+      <i style="width: 24px; height: 24px; background-size: contain; background-repeat: no-repeat; background-image: url('../../assets/images/call.jpg');"></i>
+      <i style="width: 24px; height: 24px; background-size: contain; background-repeat: no-repeat; background-image: url('../../assets/images/video.jpg');"></i>
+      <i style="width: 24px; height: 24px; background-size: contain; background-repeat: no-repeat; background-image: url('../../assets/images/dots.jpg');"></i>
+    </div>
+  </div>
+
+  <!-- Chat Body -->
+  <div class="chat-body">
+    <div *ngFor="let message of messages" [ngClass]="{'message received': message.type === 'received', 'message sent': message.type === 'sent'}">
+      <div *ngIf="message.type === 'received'">
+        <img src="../../assets/images/7.png" alt="Avatar" class="avatar" style="height: 30px;width: 30px;"/>
+      </div>
+      <div class="bubble">
+        <span>{{ message.text }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Footer -->
+  <div class="chat-footer">
+    <button class="attach-btn"><i class="icon-attach"></i></button>
+    <input type="text" placeholder="Ecrire votre message ici..." (input)="onMessageInput($event)" (keydown.enter)="sendMessage()" />
+
+    <!-- Emoji Button -->
+    <button class="emoji-btn" (click)="toggleEmojiPicker()">🙂<i class="icon-emoji"></i></button>
+    <div *ngIf="emojiPickerVisible" class="emoji-picker">
+      <div *ngFor="let emoji of emojis" class="emoji" (click)="selectEmoji(emoji)">
+        {{ emoji }}
+      </div>
+    </div>
+
+    <button class="image-btn">📙<i class="icon-image"></i></button>
+    <button class="mic-btn">🎤<i class="icon-mic"></i></button>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="signup-container">
+  <!-- Section Gauche -->
+  <div class="left-section">
+    <div class="logo">
+      <h1>AlphaCours</h1>
+    </div>
+    <div class="illustration">
+      <img src="../../assets/images/stud.png" alt="Illustration" />
+    </div>
+  </div>
+
+  <!-- Section Droite -->
+  <div class="right-section">
+    <h2>Rejoindre notre équipe d’étudiants</h2>
+
+    <!-- Formulaire -->
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <input
+          type="text"
+          [(ngModel)]="student.nom"
+          name="nom"
+          placeholder="Nom"
+          required
+        />
+        <input
+          type="text"
+          [(ngModel)]="student.prenom"
+          name="prenom"
+          placeholder="Prénom"
+          required
+        />
+      </div>
+
+      <input
+        type="email"
+        [(ngModel)]="student.email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+      <input
+        type="text"
+        [(ngModel)]="student.specialite"
+        name="specialite"
+        placeholder="Spécialité"
+        required
+      />
+      <input
+        type="password"
+        [(ngModel)]="student.password"
+        name="password"
+        placeholder="Mot de passe"
+        required
+      />
+      
+
+      <button type="submit" class="btn-submit">Créer un compte</button>
+    </form>
+
+    
+    
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="left-section">
+    <div class="logo">AlphaCours</div>
+    <div class="slogan">
+      <h1>Apprenez, pratiquez, réussissez</h1>
+    </div>
+    <div class="illustration">
+      <img src="../../assets/images/login.png" alt="Illustration" />
+    </div>
+  </div>
+
+  <div class="right-section">
+    <div class="login-card">
+      <h2 class="welcome-title"><strong>Bienvenue !</strong></h2>
+      <p class="subtitle">Veuillez saisir vos coordonnées</p>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            [(ngModel)]="credentials.email"
+            name="email"
+            placeholder=" "
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <div class="password-input">
+            <input
+              type="password"
+              id="password"
+              [(ngModel)]="credentials.password"
+              name="password"
+              placeholder=" "
+              required
+            />
+            <span class="eye-icon">👁️</span>
+          </div>
+        </div>
+
+        <button class="btn-primary" type="submit">S'identifier</button>
+      </form>
+
+      <div class="no-account">
+        <p>Vous n'avez pas de compte ?</p>
+        <a href="#" (click)="onShowTeacherRegister()">S'enregistrer comme enseignant</a>
+      </div>
+    </div>
+  </div>
+</div>

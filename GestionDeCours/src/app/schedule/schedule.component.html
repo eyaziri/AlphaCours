@@ -1,0 +1,68 @@
+<div class="schedule-container">
+  <div class="schedule-header">
+    <h1>Mon emploi du temps</h1>
+    <div class="month-selector">
+      <button class="add-button" (click)="onAddEvent()">+ Ajouter au emploi</button>
+    </div>
+  </div>
+
+  <div class="schedule-grid">
+    <div class="time-column">
+      <div *ngFor="let hour of hours" class="time-slot">{{ hour }}</div>
+    </div>
+
+    <div class="days-column" *ngFor="let day of days">
+      <div class="day-header">{{ day }}</div>
+      <div *ngFor="let event of events[day]" class="event" [ngStyle]="setEventStyle(event)">
+        <p class="event-title">{{ event.title }}</p>
+        <p class="event-time">{{ event.start }} - {{ event.end }}</p>
+        <p class="event-room">Salle: {{ event.room }}</p>
+      </div>
+    </div>
+    <!-- Formulaire d'ajout d'événement -->
+  <div  *ngIf="isAddingEvent" class="add-event-form">
+    
+    
+    <label for="title">Titre</label>
+    <input 
+      id="title" 
+      type="text" 
+      (input)="updateEventField('title', getInputValue($event))" 
+    />
+
+    <label for="start">Heure de début</label>
+    <input 
+      id="start" 
+      type="time" 
+      (input)="updateEventField('start', getInputValue($event))" 
+    />
+
+    <label for="end">Heure de fin</label>
+    <input 
+      id="end" 
+      type="time" 
+      (input)="updateEventField('end', getInputValue($event))" 
+    />
+
+    <label for="room">Salle</label>
+    <input 
+      id="room" 
+      type="text" 
+      (input)="updateEventField('room', getInputValue($event))" 
+    />
+
+    <label for="day">Jour</label>
+    <select 
+      id="day" 
+      (change)="updateEventField('day', getInputValue($event))"
+    >
+      <option *ngFor="let day of days" [value]="day">{{ day }}</option>
+    </select>
+
+    <button (click)="saveEvent()">Enregistrer</button>
+    <button (click)="cancelAddEvent()">Annuler</button>
+  </div>
+  </div>
+  </div>
+
+  

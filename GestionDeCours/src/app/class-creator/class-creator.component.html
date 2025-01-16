@@ -1,0 +1,44 @@
+<div class="signup-container">
+  <!-- Section Droite -->
+  <div class="right-section">
+    <h2>Création du cours</h2>
+
+    <!-- Formulaire -->
+    <form [formGroup]="classForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <input type="text" formControlName="Titre" placeholder="Titre" required />
+        <input type="text" formControlName="Specialite" placeholder="Spécialité" required />
+      </div>
+
+      <input type="text" formControlName="Enseignant" placeholder="Enseignant" required />
+
+      <textarea formControlName="Description" placeholder="Description" rows="4" required></textarea>
+
+      <div class="form-row file-upload">
+        <label for="fileInput">Joindre un fichier :</label>
+        <input
+          type="file"
+          id="fileInput"
+          (change)="onFileSelected($event)"
+          accept=".pdf,.doc,.docx,.png,.jpg"
+        />
+      </div>
+
+      <div class="file-preview" *ngIf="uploadedFileName">
+        <p>Fichier attaché : {{ uploadedFileName }}</p>
+      </div>
+
+      <button type="submit" class="btn-submit">Créer un cours</button>
+    </form>
+
+    <!-- Section pour afficher le fichier sous forme de dossier -->
+    <div class="folder-container" *ngIf="courseData">
+      <div class="folder" (click)="openFile(courseData.FileUrl)">
+        <h3>{{ courseData.Titre }}</h3>
+        <p>Spécialité : {{ courseData.Specialite }}</p>
+        <p>Enseignant : {{ courseData.Enseignant }}</p>
+        <p>{{ courseData.Description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
